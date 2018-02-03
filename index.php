@@ -72,8 +72,10 @@
       }
     </script>
     <?php
-      if(isset($_GET['msg'])){
+      if($_GET['msg'] === "notset"){
         echo "<script type='text/javascript'>alert('Please enter a valid e-mail.');</script>";
+      } else {
+        echo "<script type='text/javascript'>alert('Thank you. We will e-mail you soon.');</script>";
       }
     ?>
   </head>
