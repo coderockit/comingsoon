@@ -13,7 +13,7 @@
       $emails = fopen( "emails.txt", 'a') or die ('Unable to open file.');
       fwrite($emails, $newemail . ',');
       fclose($emails);
-      header("Location: index.php");
+      header("Location: index.php?msg=set");
       exit;
     }
     for ($x = 1; $x < $count; $x++){
@@ -33,7 +33,7 @@
     if ($at && $dot && $blankSpace != true && $count < 51){
       writeEmail();
     }else {
-      header("Location: index.php?msg=set");
+      header("Location: index.php?msg=notset");
     }
   }
   handleEmailInput();
