@@ -80,9 +80,9 @@
   <body>
     <div id='content'>
       <div id='main-title'>
-        <h>CodeRockit</h>
+        <h>CodeRockIt</h>
         <br>
-        <p id='main-title-p1'>A better way to micro-manage shared code.</p>
+        <p id='main-title-p1'>A better way to manage shared code. You will never use copy/paste again!</p>
         <img src='logo.svg' id='logo'/>
       </div>
       <div id='get-email-text'>
@@ -93,7 +93,7 @@
           <input name='email' id='get-email-in' onfocus="inputText(true)" onfocusout="inputText()" type="text" value="Your Email Here"/>
           <input type='submit'/>
         </form>
-        <p id='get-email-p2'>We promise to only e-mail you once when CodeRockit is ready.</p>
+        <p id='get-email-p2'>We promise to only e-mail you once when CodeRockIt is ready.</p>
       </div>
     </div>
   </body>
