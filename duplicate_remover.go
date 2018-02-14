@@ -49,8 +49,13 @@ func (fileReader *arrayBuilder) makeArrayChunk() {
 	var count int = 0
 	var slice []byte
 	for i := fileReader.firstComma + 1; i < fileReader.secondComma; i++ {
-		slice = append(slice, fileReader.fileContent[count+fileReader.firstComma+1])
-		count++
+		//if statement for newlines
+		if fileReader.fileContent[count+fileReader.firstComma+1] == 10 {
+			count++
+		} else {
+			slice = append(slice, fileReader.fileContent[count+fileReader.firstComma+1])
+			count++
+		}
 	}
 	fileReader.email = string(slice[:])
 	fileReader.firstComma = fileReader.secondComma
